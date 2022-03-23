@@ -8,4 +8,9 @@ class UsersController < ApplicationController
     )
     render json: { message: "User created successfully!" }, status: :created
   end
+
+  def show
+    user = current_user
+    render json: user
+  end
 end
